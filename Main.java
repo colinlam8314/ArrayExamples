@@ -34,7 +34,7 @@ class Main
         ar1 = new int[n];
         for (int i=0;i<ar1.length; i++)
         {
-            ar1[i]=i;
+            ar1[i]=n-1-i;
         }
         for (int i=0;i<ar1.length; i++)
         {
@@ -45,9 +45,7 @@ class Main
          *          Copy the elements of ar1 into ar2.
          */
         System.out.println("*** PRINTING ar2 *");
-        int[] ar2;
-        ar2= new int[n];
-        
+        int[] ar2 = ar1.clone();
         /* 
          * Task 3. Add 1 to each element in ar1.  Print it out below
          */
@@ -68,11 +66,12 @@ class Main
          */
         int[] ar3;
         ar3 = new int[n];
-        for (int a=0;a<ar3.length;a++)
+        for (int i = 0; i<n; i++)
         {
-            ar3[a]=a+1;
+            int[] ar3Plus = new int[i];
+            ar3Plus[i]=i+1;
+            System.out.print(ar3Plus[i]);
         }
-        
         /*
          * Task 5.  Switch the first and last element of ar1.
          *          print out the new ar1.  Then switch them back
