@@ -34,7 +34,7 @@ class Main
         ar1 = new int[n];
         for (int i=0;i<ar1.length; i++)
         {
-            ar1[i]=n-1-i;
+            ar1[i]=i;
         }
         for (int i=0;i<ar1.length; i++)
         {
@@ -44,34 +44,50 @@ class Main
          * Task 2.  Create a new array called ar2.
          *          Copy the elements of ar1 into ar2.
          */
-        System.out.println("*** PRINTING ar2 *");
-        int[] ar2 = ar1.clone();
+        int[] ar2;
+        // 
+        // ar2 = ar1.clone() also does this
+        // ar2 = ar1, just copies the address so you are not copying the array
+        //
+        ar2= new int[ ar1.length ]; // sets the size of the array to equal ar1.
+        for (int i=0 ; i<ar2.length ; i++)
+        {
+            ar2[i]=ar1[i];
+        }
+        
+        //                      ar2[    i    ] =   i    
+        for (int i=0 ; i<ar2.length ; i++)
+            System.out.println("ar2[" + i + "] = "+ar2[i]);
+        //                      ar2[    i    ] =   i
         /* 
          * Task 3. Add 1 to each element in ar1.  Print it out below
          */
+        System.out.println("**TASK 3**");
         for (int j=0; j<ar1.length;j++)
         {
-            ar2[j]=j+1;
-            System.out.println("ar2["+j+"] = "+ar2[j]); 
+            ar1[j] = j+1;
+            System.out.println("ar1["+j+"] = "+ar1[j]); 
         }
-
-        
         
         /*
          * task 4. Create a new array called ar3.
          *         Copy the elements of ar1 into ar3.  Then do it again
          *         For example
          *         ar1: 1 2 3
-         *         ar3: 1 2 3 0 1 2 3
+         *         ar3: 1 2 3 1 2 3
          */
-        int[] ar3;
-        ar3 = new int[n];
-        for (int i = 0; i<n; i++)
+        System.out.println("**Task 4**");
+        int[] ar3 = new int[n*2];
+        for (int i = 0; i<2; i++)
         {
-            int[] ar3Plus = new int[i];
-            ar3Plus[i]=i+1;
-            System.out.print(ar3Plus[i]);
+            for (int j = 0; j<ar1.length; j++)
+            {
+                ar1[j]=j+1;
+                ar3[j]=ar1[j];
+                System.out.println("ar3["+j+"] = "+ar3[j]); 
+            }
         }
+        
         /*
          * Task 5.  Switch the first and last element of ar1.
          *          print out the new ar1.  Then switch them back
