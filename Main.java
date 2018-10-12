@@ -92,7 +92,16 @@ class Main
          * Task 5.  Switch the first and last element of ar1.
          *          print out the new ar1.  Then switch them back
          */
-        
+        System.out.println("**Task 5**");
+        int value;
+        value = ar1[0];
+        ar1[0]=ar1[ar1.length-1];
+        ar1[ar1.length-1]=value;
+        for (int i = 0; i<ar1.length;i++)
+        {
+            System.out.println("ar1flipped[" +i+"] = "+ar1[i]);
+            
+        }
         /*
          * Task 6A. Print the 2nd to (n-1)th elements of ar1
          * Task 6B: Print out just the odd numbers in ar1
@@ -100,7 +109,29 @@ class Main
          *          the indices are multiples of 3
          *         
          */
+        System.out.println("**Task 6A**");
+        for (int i=1; i<ar1.length-1;i++)
+        {
+            System.out.println("ar12nd["+i+"]= "+ar1[i]);
+        }
         
+        System.out.println("**Task 6B**");
+        for (int i =0; i<ar1.length; i++)
+        {
+            if (ar1[i]%2==1)
+            {
+                System.out.println(ar1[i]);
+            }
+ 
+        }
+        
+        System.out.println("**Task 6C**");
+        for (int i =0; i<ar1.length; i++)
+        {
+            if (ar1[i]%3==0)
+            System.out.println(ar1[i]);
+        }
+     
         /*
          * Task 7.  For each element in ar1, 
          *          If the element is even: leave alone
@@ -112,6 +143,16 @@ class Main
          *          ar[2]=30
          *          ar[3]=4
          */
+        System.out.println("**Task 7**");
+        for (int i = 0; i<ar1.length; i++)
+        {
+            if (ar1[i]%2==1)
+            {
+                System.out.println(ar1[i]*10);
+                }
+            else
+            System.out.println(ar1[i]);
+        }
         
          /*
           * Task 8
@@ -123,6 +164,8 @@ class Main
           *    ar2[2]=2
           *    ar2[3]=3  ->  ar2odds[1]=3
           */
+         System.out.println("**Task 8**");
+         int[]
          
         /*
          * Task 9. In the array ar2, count how many odd numbers you
