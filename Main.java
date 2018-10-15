@@ -165,7 +165,22 @@ class Main
           *    ar2[3]=3  ->  ar2odds[1]=3
           */
          System.out.println("**Task 8**");
-         int[]
+         int[] ar2odds = new int[ar2.length];
+         int k = 0;
+         for (int i = 0; i<ar2.length; i++)
+         {
+             System.out.println(ar2[i]);
+             if (i%2==1)
+             {
+                 ar2odds[k]=ar2[i];
+                 k++;
+                }
+         for (int j=0; j<k; j++)
+         {
+             System.out.println(ar2odds[j]);
+            }
+         }
+            
          
         /*
          * Task 9. In the array ar2, count how many odd numbers you
