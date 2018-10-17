@@ -184,7 +184,7 @@ class Main
          
         /*
          * Task 9. In the array ar2, count how many odd numbers you
-         * have.  Then create an ew array called ar4.  Copy just the odd
+         * have.  Then create an new array called ar4.  Copy just the odd
          * numbers from ar1 into ar4.  Print ar4
          */
         
