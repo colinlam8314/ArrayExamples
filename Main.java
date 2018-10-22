@@ -92,7 +92,7 @@ class Main
          * Task 5.  Switch the first and last element of ar1.
          *          print out the new ar1.  Then switch them back
          */
-        System.out.println("**Task 5**");
+        /*System.out.println("**Task 5**");
         int value;
         value = ar1[0];
         ar1[0]=ar1[ar1.length-1];
@@ -101,7 +101,7 @@ class Main
         {
             System.out.println("ar1flipped[" +i+"] = "+ar1[i]);
             
-        }
+        }*/
         /*
          * Task 6A. Print the 2nd to (n-1)th elements of ar1
          * Task 6B: Print out just the odd numbers in ar1
@@ -187,7 +187,23 @@ class Main
          * have.  Then create an new array called ar4.  Copy just the odd
          * numbers from ar1 into ar4.  Print ar4
          */
-        
+        System.out.println("**Task 9**");
+        int l4=0;
+        for (int i=0; i<ar2.length; i++)
+        {
+            if (ar2[i]%2==1)
+            l4++;
+        }
+        int[] ar4 = new int[l4];
+        k=0;
+        for (int i=0; i<ar2.length; i++)
+        {
+            if (ar2[i]%2==1)
+            {
+                ar4[k]=ar2[i];
+                k++;
+            }
+        }
         /*
          * Task 10.  Shift the elements of ar4 right by 1
          * For example
