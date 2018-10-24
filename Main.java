@@ -231,9 +231,9 @@ class Main
          * Task 11.  Reverse the order of elements in ar2
          */
         System.out.println("**Task 11**");
-        for (int i=ar2.length; i>0; i--)
+        for (int i=ar2.length-1; i>0; i--)
         {
-            ar2[i-1]=i;
+            ar2[ar2.length-i]=i;
             System.out.println("ar2["+i+"]= "+ar2[i]);
         }
         
