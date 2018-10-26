@@ -257,8 +257,8 @@ class Main
          *  
          *  Count how many words have more than 5 letters.
          */
-        int[] ar6 = new int[15];
-        String[] ar5 = new String[15];
+        int[] ar6 = new int[16];
+        String[] ar5 = new String[16];
         ar5[0]="Four ";
         ar5[1]="score";
         ar5[2]="and";
@@ -275,7 +275,7 @@ class Main
         ar5[13]="a";
         ar5[14]="new";
         ar5[15]="nation";
-        for (int i=0;i<ar5.length+1; i++)
+        for (int i=0;i<ar5.length; i++)
         {
             int length = ar5[i].length();
             ar6[i]= length;
@@ -298,7 +298,7 @@ class Main
          * Use a for loop to print out the names of monster that start with
          * a vowel
          */
-        
+    
          /*
           * Task 14
           * Create an array of integers from 3 to 94 and call it arx
@@ -314,7 +314,13 @@ class Main
           *      So arindex[0]=2
           *         arindex[1]=5
           */
-         
+         System.out.println("**Task 14**");
+         int[] arx = new int[92];
+         for (int i = 0; i<arx.length; i++)
+         {
+             arx[i]=94-i;
+             System.out.println(arx[i]);
+         }
          /*
           * Create an arrary called "fb" and calculate the
           * first 10 fibonacci sequence.  You start with
