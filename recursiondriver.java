@@ -3,19 +3,26 @@ public class recursiondriver
 {
     public static void main(String[] args)
     {
-        int c = counted(9);
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int c = counted(n);
         System.out.println(c);
     }
     public static int counted(int count)
     {
+        if (count <=0)
+        {
+            return 0;
+        }
+        if (count%2==1)
+        {
+            return count + counted(count-2);
+        }
         if (count%2==0)
         {
-            return count;
+            count-=1;
+            return count + counted(count-2);
         }
-        if (count>=9)
-        {
-            return count;
-        }
-        return counted(count)+counted(count+2);
+        return 0;
     }
 }
